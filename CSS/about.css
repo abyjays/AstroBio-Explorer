@@ -1,0 +1,129 @@
+.about-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(100, 149, 237, 0.2);
+}
+
+.about-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+
+.about-section h2 {
+  font-size: 2.2em;
+  color: var(--primary-glow-color);
+  text-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-section p {
+  line-height: 1.6;
+  font-size: 1.1em;
+  text-align: center;
+  max-width: 1000px; 
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+@keyframes floatInSpace {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.team-card {
+  background: var(--card-bg-color);
+  border: 1px solid rgba(100, 149, 237, 0.5);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  animation: floatInSpace 6s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:nth-child(2) { animation-delay: -2s; }
+.team-card:nth-child(3) { animation-delay: -4s; }
+
+.team-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(30, 144, 255, 0.9);
+  animation-play-state: paused;
+}
+
+.team-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid var(--primary-glow-color);
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.5);
+}
+
+.team-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.5em;
+  color: var(--primary-link-color);
+}
+
+.team-card p {
+  margin: 5px 0;
+  font-size: 1em;
+  opacity: 0.9;
+}
+
+.team-card p.team-bio {
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+.mission-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+}
+
+.mission-list li {
+  background: rgba(15, 15, 35, 0.7);
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-link-color);
+  font-size: 1.05em;
+}
+
+.mission-list li::before {
+  content: '✨';
+  margin-right: 12px;
+}
+
+@media (max-width: 768px) {
+  .about-section h2 {
+    font-size: 1.8em;
+  }
+
+  .about-section p {
+    font-size: 1em;
+  }
+  
+  .team-grid {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

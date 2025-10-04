@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroBio Explorer</title>
+    <link rel="icon" type="image/x-icon" href="Images/mainlogo.png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+</head>
+<body>
+
+    <div>
+        <video class="hero-video" autoplay muted loop>
+        <source src="Videos/nebula.1920x1080.mp4" type="video/mp4">
+        </video> 
+        <div class="hero-overlay"></div>
+    </div>
+
+    <nav>
+        <img id="mainlogo" src="Images/mainlogo.png" alt="mainlogo">
+        <a class="currentmain"href="#Home">Home</a>
+        <a href="About.html">About</a>
+    </nav>
+
+    <header>
+        <h1 id="AstroBio">AstroBio Explorer</h1>
+        <p>Exploring the impacts of space on living systems</p>
+    </header>
+
+    <main>
+        <div class="table-container">
+            <table id="papers-table" class="display" width="100%">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="2" style="text-align:center;">🚀 Loading publications...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>AstroBio Explorer</h3>
+                <p>Exploring the impacts of space on living systems</p>
+                <p>Space Research Division, Earth Orbit Lab</p>
+                <p>✉️ <a href="mail:XXXXXXXXXX@gmail.com">XXXXXXXXXX@gmail.com</a></p>
+                <p>📞 <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></p>
+            </div>
+    
+            <ul class="social">
+                <li><a href="#" title="X"><img src="Images/icons8-x.svg" alt="X"></a></li>
+                <li><a href="#" title="LinkedIn"><img src="Images/linkedin-svgrepo-com.svg" alt="LinkedIn"></a></li>
+                <li><a href="#" title="GitHub"><img src="Images/github-142-svgrepo-com.svg" alt="GitHub"></a></li>
+                <li><a href="#" title="YouTube"><img src="Images/social-youtube-svgrepo-com.svg" alt="YouTube"></a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2025 AstroBio Explorer — All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+            window.location.reload();
+            }
+        });
+    </script>
+
+</body>
+</html>
