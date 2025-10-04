@@ -140,7 +140,7 @@ main:hover {
   display: inline-block;
   padding: 8px 16px;
   background: linear-gradient(135deg, #6a0dad, #1e90ff);
-  color: white !important;
+  color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
